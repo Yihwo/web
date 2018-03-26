@@ -10,13 +10,16 @@
     <link rel="shortcut icon" href="/images/icon32x32.png" />
     <!-- iPhone icon(Retina) -->
     <link rel="apple-touch-icon" sizes="114x114" href="/images/icon114x114.png" />
-
     <!--css normalize CDN 정규화 파일(다른 브라우저에서도 동일한 모양으로 보이도록 만들어줌) -->
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 
+    <link type="text/css" rel="stylesheet" href="css/sidebar.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
     <!--jquery library CDN-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="sidebar.min.js">
 
+    </script>
     <style>
         /*모바일 가로화면일때 스타일 */
         html{-webkit-text-size-adjust: 100;}
@@ -31,6 +34,14 @@
     <script src="main.js"></script>
 </head>
 <body>
+    <div class="main wrap">
+        <div class="conts">
+            <header class="header">
+                <!-- <button class="btn" onclick="location.href='#'">버튼</button> -->
+                <button class="menu icon"><span>메뉴</span></button>
+            </header>
+        </div>
+    </div>
     
 </body>
 </html>
