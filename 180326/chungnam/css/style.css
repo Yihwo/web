@@ -66,13 +66,13 @@ button {
 }
 /* The element to apply the animation to */
 
-.wrap.main{
+.wrap.home{
     width: 100%;
     height: 100%;
     background-color: black;
     position: relative;
 }
-.wrap.main::before{
+.wrap.home::before{
     content: '';
     display: block; 
     width: 100%;
@@ -89,13 +89,14 @@ button {
 
     background-position: 50% 50%;
     background-size: cover;
-    opacity: 0.3;
+    opacity: 0.4;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
+    /* filter: blur(2px); */
 }
-.conts {
+.container {
     position: relative;
     z-index: 3;
 }
@@ -105,7 +106,7 @@ button {
     background-color: #ffd800;
     position: relative;
 }
-.main .header{
+.home .header{
     background: none; 
 }
 .header .menu {
@@ -116,4 +117,96 @@ button {
     right: 5px;
     top: 2px;
     color: white;
+}
+.ui.sidebar .top{
+    background: #202020;
+    text-align: center;
+    padding: 0;
+    position: relative;
+    margin: 0;
+}
+.ui.sidebar .navi ul,
+.ui.sidebar .navi li{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.ui.sidebar .navi a{
+    display: block;
+    padding: 13px 0;
+    text-align: center;
+    border-bottom:solid #ccc 1px;
+    font-size: 1rem;
+}
+.ui.sidebar .navi li::after{
+    content:'keyboard_arrow_right';
+    font-family: 'Material Icons';
+    position: absolute;
+    top: 13px;
+    right: 5px;
+    font-size: 24px;
+}
+.ui.sidebar .navi li{
+    position: relative;
+}
+.ui.sidebar .close{
+    position: absolute;
+    padding: 10px;
+    color: white;
+    border: 1px red solid;
+}
+/* home contents */
+.home .contents .title{ 
+    border: 1px solid red;
+    color: white;
+    text-align: center;
+}
+.home .contents .cont .tit{
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.home .contents .cont{
+    border: 1px solid red;
+    width: 80%;
+    margin: 0 auto;
+    height: 250px;
+    font-size: 0.8em;
+    color: white;
+    overflow: auto;
+    text-align: justify;
+}
+.home .contents .links{
+    width: 80%;
+    margin: 20px auto;
+    color: white;
+}
+.home .contents .links .btn{
+    background: rgba(0, 0, 0, 0.7);
+}
+.home .contents .links .btn:nth-child(3){
+    width: 48%;
+    float: left;
+}
+.home .contents .links .btn:nth-child(4){
+    width: 48%;
+    float: right;
+}
+
+/* 사이드바 */
+#body .ui.sidebar{
+    background: white;
+}
+body.pushable>.pusher {
+    background: black;
+}
+.pushable>.pusher:after{
+    background: rgba(0, 0, 0, 0.6);
+}
+/* 공통 스타일 */
+.pointTxt{
+    color: #ffd800 !important;
+}
+::-webkit-scrollbar{
+    width: 0px;
 }

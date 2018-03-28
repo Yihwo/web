@@ -29,6 +29,9 @@
 .icon.locationOn::before{
     content: 'location_on';
 }
+.icon.close::before{
+    content: 'close';
+}
 .icon span{
     position: absolute;
     width: 1px;
