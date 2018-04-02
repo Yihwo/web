@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
+    <title> 모바일사이트</title>
+
+    <!--  안드로이드(Android) -->
+    <link rel="shortcut icon" href="images/icon32x32.png" />
+    <!-- iPhone icon(Retina) -->
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icon114x114.png" />
+    <!--css normalize CDN 정규화 파일(다른 브라우저에서도 동일한 모양으로 보이도록 만들어줌) -->
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+
+    <link type="text/css" rel="stylesheet" href="css/sidebar.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/icon.css">
+    <!--jquery library CDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="js/sidebar.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <!--Use Swiper from CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+</head>
+
+<body id="body">
+    <div class="page2 wrap pusher">
+        <div class="container">
+            <header class="header">
+                <h1>청남대 지도보기</h1>
+                <button class="icon back">
+                    <span>닫기</span>
+                </button>
+                <!-- <button class="btn" onclick="location.href='#'">버튼</button> -->
+                <button class="menu icon">
+                    <span>메뉴</span>
+                </button>
+            </header>
+            <main class="contents">
+                <!-- 외부 Swiper -->
+                <div class="swiper-container tabMenu">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">대통령 기념관</div>
+                        <div class="swiper-slide">하늘정원</div>
+                        <div class="swiper-slide">국화축제</div>
+                        <div class="swiper-slide">청남대본관</div>
+                        <div class="swiper-slide">전망대</div>
+                        <div class="swiper-slide">대통령광장</div>
+                        <div class="swiper-slide">돌탑</div>
+                        <div class="swiper-slide">음악분수대</div>
+                        <div class="swiper-slide">영춘재</div>
+                    </div>
+                </div>
+                <div class="linkDetail">
+                    <div class="img">
+                        <img src="images/page1/01_01.jpg" alt="">
+                    </div>
+                    <div class="tit">대통령 기념관</div>
+                    <a href="page1.html#slide3" class="btn">상세보기</a>
+                    <a href="#" class="icon close"><span>닫기</span></a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- sidebar
+    <div class="ui sidebar inverted vertical menu right">
+        <div class="top">
+            <img src="../images/top_logo.png" alt="">
+            <a href="#" class="icon close"><span>닫기</span></a>
+        </div>
+        <nav class="navi">
+            <ul>
+                <li><a href="../index.html">청남대 소개</a></li>
+                <li><a href="page1.html">청남대 둘러보기</a></li>
+                <li><a href="page2.html">청남대 지도보기</a></li>
+                <li><a href="page3.html">주변관광정보</a></li>
+                <li><a href="page4.html">이용안내</a></li>
+            </ul>
+        </nav>
+    </div>
+-->
+    <script type="text/javascript">
+        var swiperImages1 = new Swiper('.swiper-images', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+        var tabContents = new Swiper('.tabContents', {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        var tabMenu = new Swiper('.tabMenu', {
+            spaceBetween: 30,
+            centeredSlides: false,
+            slidesPerView: 'auto',
+            touchRatio: 0.5,
+            slideToClickedSlide: true,
+            normalizeSlideIndex: false,
+            slidesOffsetBefore: 50,
+            slidesOffsetAfter: 50,
+        });
+        // tabContents.controller.control = tabMenu;
+        // tabMenu.controller.control = tabContents;
+        tabMenu.on('tap', function () {
+            $('.tabMenu .swiper-slide').removeClass("active");
+            console.log(this.activeIndex);
+            $('.tabMenu .swiper-slide').eq(this.activeIndex).addClass("active");
+            $('.linkDetail').css("bottom","0px");
+        });
+        $('.linkDetail .close').on('click',function(){
+            $('.linkDetail').css("bottom","-120px");
+        });
+
+    </script>
+</body>
+
+</html>

@@ -24,6 +24,9 @@
     white-space: nowrap;
     direction: ltr;
 }
+.icon.back::before{
+    content: 'keyboard_arrow_left';
+}
 .icon.menu::before{
     content: 'menu';
 }
