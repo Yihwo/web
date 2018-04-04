@@ -23,4 +23,7 @@ $(document).ready(function () {
     $(".ui.sidebar .close").on("click", function () {
         $('.ui.sidebar').sidebar('toggle');
     })
+    $(".header .back").on("click",function(){
+        window.history.back();
+    })
 });

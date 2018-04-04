@@ -45,16 +45,17 @@
                 <!-- 외부 Swiper -->
                 <div class="swiper-container tabMenu">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">대통령 기념관</div>
-                        <div class="swiper-slide">하늘정원</div>
-                        <div class="swiper-slide">국화축제</div>
-                        <div class="swiper-slide">청남대본관</div>
-                        <div class="swiper-slide">전망대</div>
-                        <div class="swiper-slide">대통령광장</div>
-                        <div class="swiper-slide">돌탑</div>
-                        <div class="swiper-slide">음악분수대</div>
-                        <div class="swiper-slide">영춘재</div>
+                        <div class="swiper-slide" data-img="01_01.jpg">대통령 기념관</div>
+                        <div class="swiper-slide" data-img="01_02.jpg">하늘정원</div>
+                        <div class="swiper-slide" data-img="01_01.jpg">국화축제</div>
+                        <div class="swiper-slide" data-img="01_02.jpg">청남대본관</div>
+                        <div class="swiper-slide" data-img="01_01.jpg">전망대</div>
+                        <div class="swiper-slide" data-img="01_02.jpg">대통령광장</div>
+                        <div class="swiper-slide" data-img="01_01.jpg">돌탑</div>
+                        <div class="swiper-slide" data-img="01_02.jpg">음악분수대</div>
+                        <div class="swiper-slide" data-img="01_01.jpg">영춘재</div>
                     </div>
+                    <div class="mapAPI"></div>
                 </div>
                 <div class="linkDetail">
                     <div class="img">
@@ -111,10 +112,22 @@
         // tabContents.controller.control = tabMenu;
         // tabMenu.controller.control = tabContents;
         tabMenu.on('tap', function () {
+            var textTit;
+            var textLink;
+            var imgsrc;
+            var $activeSlide=$('.tabMenu .swiper-slide').eq(this.activeIndex);
             $('.tabMenu .swiper-slide').removeClass("active");
             console.log(this.activeIndex);
-            $('.tabMenu .swiper-slide').eq(this.activeIndex).addClass("active");
+            $activeSlide.addClass("active");
+            textTit =$activeSlide.text();
+            textLink = "page1.html#slide"+(this.activeIndex+1);
+            imgsrc = "images/page1/"+$activeSlide.attr("data-img");
+
+            $('.linkDetail img').attr("src",imgsrc);
+            $('.linkDetail .tit').text(textTit);
+            $('.linkDetail .btn').attr("href",textLink);
             $('.linkDetail').css("bottom","0px");
+            
         });
         $('.linkDetail .close').on('click',function(){
             $('.linkDetail').css("bottom","-120px");

@@ -78,6 +78,7 @@ button {
     height: 50px;
     background-color: #ffd800;
     position: relative;
+    z-index: 10;
 }
 .header h1{
     margin: 0;
@@ -100,6 +101,7 @@ text_overflow:eclipsis; 박스 밖으로 나간 글씨들
 */
 .home .header{
     background: none; 
+    z-index: 10;
 }
 .header .back,
 .header .menu{
@@ -109,7 +111,6 @@ text_overflow:eclipsis; 박스 밖으로 나간 글씨들
     position: absolute;
     top: 0px;
     color: white;
-    border: 1px red solid;
 }
 .header .menu {
     right: 0px;
@@ -295,7 +296,6 @@ text_overflow:eclipsis; 박스 밖으로 나간 글씨들
 .page1 .tabContents>.swiper-wrapper>.swiper-slide{
     overflow-y: auto;
     height: 90vh;
-    border: 1px solid #f00;
 }
 .page1 .swiper-images {
     width:100%;
@@ -317,11 +317,11 @@ text_overflow:eclipsis; 박스 밖으로 나간 글씨들
 
 
 /* page2 css */
+
 .linkDetail .close.icon{
     position: absolute;
     right: 10px;
     top: 5px;
-    border: 1px solid red;
 }
 .linkDetail{
     position: fixed;
@@ -331,7 +331,8 @@ text_overflow:eclipsis; 박스 밖으로 나간 글씨들
     height: 120px;
     background: white;
     border-top: 1px #ccc solid;   
-    transition: all 0.5s ease-in-out 0.1s 
+    transition: all 0.5s ease-in-out 0.1s;
+    z-index: 3;
 }
 .linkDetail .img{
     width: 100px;
@@ -359,4 +360,83 @@ text_overflow:eclipsis; 박스 밖으로 나간 글씨들
     bottom: 25px;
     width: 50%;
     right: 10px;
+}
+.page2 .mapAPI{
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    position: fixed;
+    top:94px;
+    left: 0;
+    background-color: aquamarine;
+}
+
+/* page3 */
+/* page3 detail */
+.page3 .item.detail{
+    position: fixed;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    background: white;
+}
+.page3 .item{
+    position: relative;
+    padding:10px 20px 0;
+}
+.page3 .item .title{
+    text-align: center;
+    padding:10px 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.page3 .item.detail .title{
+    border-bottom: #ccc solid 1px;
+    margin-bottom: 15px;
+}
+.page3 .item .img{
+    height: 200px;
+    width:100%;
+    overflow: hidden;
+}
+.page3 .item .img img{
+    width: 100%;
+}
+.page3 .item .phone{
+    padding-top: 15px;
+}
+.page3 .item.detail .cont{
+    font-size: 0.9em;
+}
+.page3 .detail.item .schedule{
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.page3 .detail.item .close{
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.page3 .item.detail .cont{
+    display: block;
+}
+.page3 .item .schedule,
+.page3 .item .close,
+.page3 .item .cont{
+    display: none;
+}
+/* page3 item */
+.page3 .item .itemLink{
+    display: block;
+    border-bottom: solid 1px #ccc;
+    padding-bottom: 15px
+}
+.page3 .detail.item .itemLink{
+    border: none;
 }
