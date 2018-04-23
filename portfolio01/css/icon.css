@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+
+.btn{
+    border: #ffd800 1px solid;
+    padding: 0.5em 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 0 0 5px 0;
+    line-height: 1em;
+}
+.icon{
+    font-family: 'Material Icons';
+    font-size: 24px;
+    color: inherit;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+.icon.back::before{
+    content: 'keyboard_arrow_left';
+}
+.icon.schedule::before{
+    content:'perm_contact_calendar';
+}
+.icon.menu::before{
+    content: 'menu';
+}
+.icon.arrowLeft::before{
+    content: 'keyboard_arrow_left';
+}
+.icon.arrowRight::before{
+    content: 'keyboard_arrow_right';
+}
+.icon.search::before{
+    content: 'search';
+}
+.icon.locationOn::before{
+    content: 'location_on';
+}
+.icon.close::before{
+    content: 'close';
+}
+.icon span{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+}

@@ -1,0 +1,48 @@
+/* 패딩 마진 등등 값 초기화*/
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css?family=Passion+One');
+*{
+    vertical-align: top;
+    padding:0; 
+    margin:0; 
+    box-sizing: border-box;
+    font-size: 1em;
+}
+/* 리스트 스타일 */
+ul,li,ol{
+    list-style-type: none;
+    /* li 점의 위치  */
+    /* list-style-position: inside; */
+    /* list-style-image: url(); */
+}
+.clearBox::after {content:''; display: block; clear:both;}
+html, body{
+    font-size: 12px;
+    font-family: 'Noto Sans KR',sans-serif;
+    font-weight: 400;
+    height: 100%;
+}
+/* 링크 스타일 */
+a{
+    text-decoration:none; color:black;
+    /* transition:all 0.5s ease-in-out 0.1s; */
+    /* transision : 천천히 변하게 */
+}
+
+
+.hidden {text-indent: -9999px; width: 1px;   height: 1px; position: absolute}
+
+/* .jumbotron .tx3 a{
+    text-decoration:none; color:black; 
+    transition:all 0.5s ease-in-out 0.1s; 
+    transision : 천천히 변하게 
+}
+.jumbotron .tx3 a:hover {text-decoration: none; color:yellow; border:2px solid yellow; background-color: black;} */
+a:visited {text-decoration: none;}
+/* 방문한 페이지 */
+/* a:active {background:blue} */
+/* 누르고 있는 동안 */
+/* table */
+table {
+    border-collapse: collapse;
+}
