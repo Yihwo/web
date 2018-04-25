@@ -287,7 +287,7 @@ text_overflow:eclipsis; 박스 밖으로 나간 글씨들
 .page1 .tabMenu .swiper-slide-active,
 .page2 .tabMenu .active {
     color: #ffd800;
-}
+} 
 
 /* page1 */
 .page1 .tabMenu .swiper-slide-active {
