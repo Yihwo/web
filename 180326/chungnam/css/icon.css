@@ -3,12 +3,12 @@
 
 .btn{
     border: #ffd800 1px solid;
-    padding: 0.5em 0;
+    padding: 0.7em 0;
     text-align: center;
     display: block;
     width: 100%;
     margin: 0 0 5px 0;
-    line-height: 1em;
+    line-height: 1.5em;
 }
 .icon{
     font-family: 'Material Icons';
